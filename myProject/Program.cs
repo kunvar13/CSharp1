@@ -6,14 +6,72 @@ namespace myProject
     {
         static void Main(string[] args)
         {
-            string myString = "229233788889862221";
+            string value = Console.ReadLine();
+            Console.WriteLine(value);
+            int decnum = Convert.ToInt32(value);
+
+            string binaryString = ConvertDecToBin(decnum);
+            Console.WriteLine("This is the Result " + binaryString);
+        } 
+
+    static string ConvertDecToBin(int num)
+    {
+            {
+                int decnum = 15;
+                string Result = "";
+                int remind;
+                int i;
+
+                while (decnum > 0)
+                {
+                    remind = decnum % 2;
+                    decnum = decnum / 2;
+                    Result += Convert.ToString(remind);
+                    //Console.WriteLine();
+                    //Console.WriteLine();
+
+
+                }
+                //Console.WriteLine("This is the result " + Result);
+
+                string reversResult = "";
+                for (i = Result.Length; i > 0; i--)
+                {
+                    reversResult += Result[i - 1];
+
+                }
+                // Console.WriteLine("This is the Actual Result " + reversResult);
+                return reversResult; 
+            }
+        }
+        
+    }
+}
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            /* string myString = "11112";
 
             char cl = myString[0];
             char pl = myString[0];
             int counter = 1;
             int maxrun = 1;
 
-            for (int i = 0; i < myString.Length; i++)
+            for (int i = 1; i < myString.Length; i++)
             {
                cl = myString[i];
 
