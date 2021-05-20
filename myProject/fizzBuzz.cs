@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace myProject
+{
+    public class fizzBuzz
+    {
+        public static void Run()
+        {
+            for (int i = 0; i <= 100; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine(i + "Fizz Buzz");
+                    continue;
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine(i + "Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine(i + "Buzz");
+                }
+                else
+                { Console.WriteLine(i); }
+
+            }
+
+        }
+
+    }
+}

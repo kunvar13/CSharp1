@@ -6,133 +6,39 @@ namespace myProject
     {
         static void Main(string[] args)
         {
-            string value = Console.ReadLine();
-            Console.WriteLine(value);
-            int decnum = Convert.ToInt32(value);
+            int n = 111;
+            int per = Persistence(n);
+            Console.WriteLine(per);
 
-            string binaryString = ConvertDecToBin(decnum);
-            Console.WriteLine("This is the Result " + binaryString);
-        } 
-
-    static string ConvertDecToBin(int num)
-    {
-            {
-                int decnum = 15;
-                string Result = "";
-                int remind;
-                int i;
-
-                while (decnum > 0)
-                {
-                    remind = decnum % 2;
-                    decnum = decnum / 2;
-                    Result += Convert.ToString(remind);
-                    //Console.WriteLine();
-                    //Console.WriteLine();
-
-
-                }
-                //Console.WriteLine("This is the result " + Result);
-
-                string reversResult = "";
-                for (i = Result.Length; i > 0; i--)
-                {
-                    reversResult += Result[i - 1];
-
-                }
-                // Console.WriteLine("This is the Actual Result " + reversResult);
-                return reversResult; 
-            }
         }
-        
-    }
-}
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            /* string myString = "11112";
 
-            char cl = myString[0];
-            char pl = myString[0];
-            int counter = 1;
-            int maxrun = 1;
-
-            for (int i = 1; i < myString.Length; i++)
-            {
-               cl = myString[i];
-
-                if (cl == pl)
+        public static int Persistence(int n)
+        {
+            string m = Convert.ToString(n);
+            Console.WriteLine("This is the string equivalent of n " + m);
+            Console.WriteLine("This is the length of m " + m.Length);
+            //int length = m.Length;
+            //int mult = 11;
+            int m2 = 1;
+            int n2 = 1;
+            
+            for (int i = 0; i < m.Length; i++)
                 {
-                    counter++;
-                    
-                }
+                Console.WriteLine( "This is the element on each loop " + m[i]);    
+                
+                m2 = Convert.ToInt32(m[i]) * m2;
 
-                else
-                {
-                    counter = 1;
-                    pl = cl;
-                }
+                Console.WriteLine("This is the multiplication m2 " + m2);
+                //m2 = n2;
 
-                if (counter>maxrun)
-                {
-                    maxrun = counter;
-                }
+           }
+                Console.WriteLine("This is the final multiplication" + m2);
 
-               
-
-            }
-            Console.WriteLine(maxrun);
+            return m2;
         }
-        
+
+            
+
     }
 
 }
-
-
-
-
-
-
-
-            /*{
-            for(int i=0; i<= 100; i++)
-            {
-                if (i % 3 == 0 && i % 5 == 0)
-                {
-                    Console.WriteLine(i + "Fizz Buzz");
-                    continue;
-                }
-                else if (i % 3 == 0)
-                {
-                    Console.WriteLine(i + "Fizz");
-                }
-                else if (i % 5 == 0)
-                {
-                    Console.WriteLine(i + "Buzz");
-                }
-                else
-                { Console.WriteLine(i); }
-
-            }
-
-            }
-
-            
-        }*/
-    //}
-
-
